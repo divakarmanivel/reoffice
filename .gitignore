@@ -1,3 +1,5 @@
 node_modules
-lib
-demo/text.docx
+./demo/*
+!./demo/*.js
+package-lock.json
+.vscode
