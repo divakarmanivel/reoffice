@@ -2,7 +2,10 @@
   "name": "reoffice",
   "description": "Create office documents with React",
   "version": "1.0.0",
-  "repository": "https://github.com/divakarmanivel/reoffice",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divakarmanivel/reoffice.git"
+  },
   "main": "./lib/index.js",
   "author": "Divakar Manivel",
   "license": "MIT",
