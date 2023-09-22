@@ -1,18 +1,14 @@
-# redocx
-[![Build Status](https://travis-ci.org/nitin42/redocx.svg?branch=master)](https://travis-ci.org/nitin42/redocx)
-![yarn](https://img.shields.io/badge/yarn-0.21.3-blue.svg)
+# reoffice
 ![license](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![status](https://img.shields.io/badge/status-stable-brightgreen.svg)
 
-> Create word documents with React
-
-<p align='center'>
-  <img src='./redocx.png' width='450' height='180' />
-</p>
+> Create office documents with React
 
 ## Introduction
 
-`redocx` is a library which lets you create word documents with React. It provides a set of components which renders your declarative views and components to word documents. 
+`reoffice` is a library which lets you create word documents with React. It provides a set of components which renders your declarative views and components to word documents. 
+
+This is a fork from [redocx](https://github.com/nitin42/redocx) by Nitin Tulswani so all credits go to him. I have made changes to support all the updated packages like React 18 and Babel 7.
 
 #### Example 
 
@@ -20,7 +16,7 @@ A simple component that renders a "Hello World" text to a word document.
 
 ```js
 import React from 'react'
-import { render, Document, Text } from 'redocx'
+import { render, Document, Text } from 'reoffice'
 
 class App extends React.Component {
   render() {
@@ -43,26 +39,24 @@ Let's get started!
 **Babel presets and cli**
 
 ```
-npm install --save-dev babel-cli babel-core babel-preset-env babel-preset-react babel-preset-stage-0
+npm install @babel-cli @babel-core @babel-preset-env @babel-preset-react --save-dev
 ```
 
-**react and redocx**
+**react and reoffice**
 
 ```
-npm install --save react redocx
+npm install react reoffice
 ```
 
 ## Usage
 
-* Create a `.babelrc`
-
+* Create a `babel.config.json`
 ```
 {
   "presets": [
-    "env",
-    "stage-0",
-    "react"
-  ]
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
 }
 ```
 
@@ -72,8 +66,8 @@ npm install --save react redocx
 ## Demo
 
 ```
-git clone https://github.com/nitin42/redocx.git
-cd redocx
+git clone https://github.com/divakarmanivel/reoffice.git
+cd reoffice
 npm install
 npm run example
 ```
@@ -84,11 +78,9 @@ See the detailed documentation [here](./docs)
 
 ## Contributing
 
-[Contributing guide](https://github.com/nitin42/redocx/blob/master/CONTRIBUTING.md)
+See the Contributing guide [here](https://github.com/divakarmanivel/reoffice/blob/master/CONTRIBUTING.md)
 
 ## License
 
 MIT
-
-[![Sponsor](https://app.codesponsor.io/embed/FCRW65HPiwhNtebDx2tTc53E/nitin42/redocx.svg)](https://app.codesponsor.io/link/FCRW65HPiwhNtebDx2tTc53E/nitin42/redocx)
 

@@ -1,33 +1,31 @@
 /* eslint-disable */
 
-import emptyObject from 'fbjs/lib/emptyObject'
-const Reconciler = require('react-reconciler')
-
-import { createElement, getHostContextNode } from '../utils/createElement'
+import ReactReconciler from 'react-reconciler';
+import { createElement, getHostContextNode } from '../utils/createElement';
 
 const RendererHostConfig = {
 	appendInitialChild(parentInstance, child) {
 		if (parentInstance.appendChild) {
-			parentInstance.appendChild(child)
+			parentInstance.appendChild(child);
 		} else {
-			parentInstance.document = child
+			parentInstance.document = child;
 		}
 	},
 
 	createInstance(type, props, internalInstanceHandle) {
-		return createElement(type, props)
+		return createElement(type, props);
 	},
 
 	createTextInstance(text, rootContainerInstance, internalInstanceHandle) {
-		return text
+		return text;
 	},
 
 	finalizeInitialChildren(wordElement, type, props) {
-		return false
+		return false;
 	},
 
 	getPublicInstance(inst) {
-		return inst
+		return inst;
 	},
 
 	prepareForCommit() {
@@ -35,7 +33,7 @@ const RendererHostConfig = {
 	},
 
 	prepareUpdate(wordElement, type, oldProps, newProps) {
-		return true
+		return true;
 	},
 
 	resetAfterCommit() {
@@ -43,7 +41,7 @@ const RendererHostConfig = {
 	},
 
 	resetTextContent(wordElement) {
-		// Redocx does not have a text node like DOM
+		// Reoffice does not have a text node like DOM
 	},
 
 	// If you've such use case where you need to provide data from the root instance,
@@ -52,70 +50,73 @@ const RendererHostConfig = {
 	createInstance(type, props, internalInstanceHandle) {
 		// 'internalInstanceHandle' is not transparent here. So use host context methods
 		// to get data from roots
-		return createElement(type, props)
+		return createElement(type, props);
 	},
 
 	// Use this current instance to pass data from root
 	getRootHostContext(instance) {
 		// getHostContextNode here updates the internal state of createElement and stores a ref to current instance
-    return getHostContextNode(instance)
+    	return getHostContextNode(instance);
 	},
 
 	getChildHostContext() {
-		return emptyObject
+		let context = {};
+		return context;
 	},
 
 	shouldSetTextContent(type, props) {
-		return false // Redocx does not have a text node like DOM
+		return false; // Reoffice does not have a text node like DOM
 	},
 
-	now: () => {},
+	now: () => Date.now,
 
-	useSyncScheduling: true,
+	supportsMutation: true,
 
-	mutation: {
-		appendChild(parentInstance, child) {
-			if (parentInstance.appendChild) {
-				parentInstance.appendChild(child)
-			} else {
-				parentInstance.document = child
-			}
-		},
+	appendChild(parentInstance, child) {
+		if (parentInstance.appendChild) {
+			parentInstance.appendChild(child);
+		} else {
+			parentInstance.document = child;
+		}
+	},
 
-		appendChildToContainer(parentInstance, child) {
-			if (parentInstance.appendChild) {
-				parentInstance.appendChild(child)
-			} else {
-				parentInstance.document = child
-			}
-		},
+	appendChildToContainer(parentInstance, child) {
+		if (parentInstance.appendChild) {
+			parentInstance.appendChild(child);
+		} else {
+			parentInstance.document = child;
+		}
+	},
 
-		removeChild(parentInstance, child) {
-			parentInstance.removeChild(child)
-		},
+	removeChild(parentInstance, child) {
+		parentInstance.removeChild(child);
+	},
 
-		removeChildFromContainer(parentInstance, child) {
-			parentInstance.removeChild(child)
-		},
+	removeChildFromContainer(parentInstance, child) {
+		parentInstance.removeChild(child);
+	},
 
-		insertBefore(parentInstance, child, beforeChild) {
-			// noob
-		},
+	insertBefore(parentInstance, child, beforeChild) {
+		// noop
+	},
 
-		commitUpdate(instance, updatePayload, type, oldProps, newProps) {
-			// noop
-		},
+	commitUpdate(instance, updatePayload, type, oldProps, newProps) {
+		// noop
+	},
 
-		commitMount(instance, updatePayload, type, oldProps, newProps) {
-			// noop
-		},
+	commitMount(instance, updatePayload, type, oldProps, newProps) {
+		// noop
+	},
 
-		commitTextUpdate(textInstance, oldText, newText) {
-			textInstance.children = newText
-		},
+	commitTextUpdate(textInstance, oldText, newText) {
+		textInstance.children = newText;
+	},
+
+	clearContainer(container) {
+		// noop
 	},
 }
 
-const WordRenderer = Reconciler(RendererHostConfig)
+const WordRenderer = ReactReconciler(RendererHostConfig);
 
 export { WordRenderer }

@@ -1,10 +1,12 @@
 import React from 'react';
-import { List, Document, BulletItem, NumberItem } from '../src/';
+import {
+  List, Document, BulletItem, NumberItem,
+} from '../src';
 import { testRenderer as render } from '../src/renderer/render';
 
 it('sanity check', () => {
-  expect(render(<List />)).toMatchSnapshot()
-})
+  expect(render(<List />)).toMatchSnapshot();
+});
 
 it('should render a list of dots', () => {
   const App = () => (
@@ -12,10 +14,10 @@ it('should render a list of dots', () => {
       <BulletItem>One</BulletItem>
       <BulletItem>Two</BulletItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list of numbers (currently unstable)', () => {
   const App = () => (
@@ -23,10 +25,10 @@ it('should render a list of numbers (currently unstable)', () => {
       <NumberItem>One</NumberItem>
       <NumberItem>Two</NumberItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list of dots with style prop', () => {
   const App = () => (
@@ -34,10 +36,10 @@ it('should render a list of dots with style prop', () => {
       <BulletItem>One</BulletItem>
       <BulletItem>Two</BulletItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list of dots with align prop', () => {
   const App = () => (
@@ -45,21 +47,21 @@ it('should render a list of dots with align prop', () => {
       <BulletItem>One</BulletItem>
       <BulletItem>Two</BulletItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list of dots and each item can be styled and aligned individually', () => {
   const App = () => (
     <List>
-      <BulletItem align='center' style={{color: 'red'}}>One</BulletItem>
+      <BulletItem align='center' style={{ color: 'red' }}>One</BulletItem>
       <BulletItem>Two</BulletItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list of numbers with align prop', () => {
   const App = () => (
@@ -67,21 +69,21 @@ it('should render a list of numbers with align prop', () => {
       <NumberItem>One</NumberItem>
       <NumberItem>Two</NumberItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list of numbers and each item can be styled and aligned individually', () => {
   const App = () => (
     <List>
-      <NumberItem align='center' style={{color: 'red'}}>One</NumberItem>
+      <NumberItem align='center' style={{ color: 'red' }}>One</NumberItem>
       <NumberItem>Two</NumberItem>
     </List>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list and aligned through context', () => {
   const App = () => (
@@ -91,20 +93,20 @@ it('should render a list and aligned through context', () => {
         <NumberItem>Two</NumberItem>
       </List>
     </Document>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a list and styled through context', () => {
   const App = () => (
-    <Document style={{ color: 'blue'}}>
+    <Document style={{ color: 'blue' }}>
       <List>
         <NumberItem>One</NumberItem>
         <NumberItem>Two</NumberItem>
       </List>
     </Document>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});

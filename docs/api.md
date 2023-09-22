@@ -14,12 +14,11 @@
    * [PageBreak](#pagebreak-)
    * [Table](#table-)
    * [Image](#image-)
-   * [Platform](#platform)
 
 
 ## render(element, filepath)
 
-Renders a React element to word document with a filepath and returns a top-level [document object](https://github.com/nitin42/redocx/blob/master/docs/misc.md).
+Renders a React element to word document with a filepath and returns a top-level [document object](https://github.com/divakarmanivel/reoffice/blob/master/docs/misc.md).
 
 ### parameters
 
@@ -49,7 +48,7 @@ You can also render the documents straight to memory mapped stream. For example 
 
 ```jsx
 import { Component } from 'react'
-import { Document, Text } from 'redocx'
+import { Document, Text } from 'reoffice'
 
 class App extends Component {
   render() {
@@ -62,7 +61,7 @@ class App extends Component {
 }
 
 render(<App />).then((stream) => {
-  fs.open('sample.docx', 'w+', stream.length, null, (err, fd) => {
+  fs.open('sample.docx', 'w+', (err, fd) => {
     if (err) {
       console.log(err);
     }
@@ -99,7 +98,7 @@ const DocumentComponent = () => (
   <Document 
     align='center' 
     style={{ color: 'red', fontSize: 20 }}
-    info={{ author: 'Nitin', description: 'Sample document' }}
+    info={{ author: 'Divakar', description: 'Sample document' }}
     >
     Hello World
   </Document>
@@ -358,24 +357,3 @@ const ImageComponent = () => (
   <Image src='./xyz/one.png' align='center' width='200' height='200' />
 )
 ```
-
-### Platform
-
-A lot of other custom renderers ([react-sketchapp](https://github.com/airbnb/react-sketchapp), [react-tv](https://github.com/raphamorim/react-tv) all have it). It's useful for platform differences within universal components.
-
-#### Usage
-
-```js
-import { Platform } from 'redocx'
-
-Platform.OS // 'word'
-
-const obj = {
-  word: { /** some platform specific code that you want to run **/ }
-}
-
-// Then use it like this
-Platform.select(obj)
-```
-
-> It's still experimental and may change in future.

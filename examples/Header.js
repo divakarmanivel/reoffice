@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Header, Document } from '../src/';
+import { Header, Document } from '../src';
 
 class HeaderComponent extends Component {
-  render () {
+  render() {
     return (
       <Document>
         <Header style={{ color: 'mistyrose', bold: true }} align='center'>Heading</Header>
@@ -11,4 +11,4 @@ class HeaderComponent extends Component {
   }
 }
 
-export default HeaderComponent
+export default HeaderComponent;

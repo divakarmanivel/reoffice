@@ -1,6 +1,6 @@
 # Styling 💄
 
-#### You can use [glamorous-redocx](https://github.com/nitin42/glamorous-redocx) to style the redocx components. Check it out because it's awesome!
+#### You can use [glamorous-reoffice](https://github.com/nitin42/glamorous-redocx) to style the reoffice components. Check it out because it's awesome!
 
 ## Style properties for the component
 Below are the style properties for Text, Document, List, Header, Footer, BulletItem and NumberItem components.

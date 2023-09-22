@@ -3,7 +3,7 @@
 exports[`should put a page break 1`] = `
 WordDocument {
   "doc": officegen {
-    "_events": Object {
+    "_events": {
       "afterGen": [Function],
       "beforeGen": [Function],
       "clearData": [Function],
@@ -19,54 +19,55 @@ WordDocument {
     "createJson": [Function],
     "createListOfDots": [Function],
     "createListOfNumbers": [Function],
+    "createNestedOrderedList": [Function],
+    "createNestedUnOrderedList": [Function],
     "createP": [Function],
     "createTable": [Function],
-    "data": Array [
-      Object {
-        "data": Array [
-          Object {
+    "data": [
+      {
+        "data": [
+          {
             "page_break": true,
           },
         ],
       },
     ],
-    "domain": null,
     "generate": [Function],
     "getFooter": [Function],
     "getHeader": [Function],
-    "info": Object {
-      "cp:category": Object {
+    "info": {
+      "cp:category": {
         "data": "",
         "def_data": "",
         "element": "cp:category",
       },
-      "cp:contentStatus": Object {
+      "cp:contentStatus": {
         "data": "",
         "def_data": "",
         "element": "cp:contentStatus",
       },
-      "cp:keywords": Object {
+      "cp:keywords": {
         "data": "",
         "def_data": "",
         "element": "cp:keywords",
       },
-      "dc:description": Object {
+      "dc:description": {
         "data": "",
         "def_data": "",
         "element": "dc:description",
       },
-      "dc:subject": Object {
+      "dc:subject": {
         "data": "",
         "def_data": "",
         "element": "dc:subject",
       },
-      "dc:title": Object {
+      "dc:title": {
         "data": "",
         "def_data": "",
         "element": "dc:title",
       },
     },
-    "options": Object {
+    "options": {
       "type": "docx",
     },
     "putPageBreak": [Function],
@@ -79,18 +80,19 @@ WordDocument {
     "setTheme": [Function],
     "startNewDoc": [Function],
     "theme": null,
+    Symbol(kCapture): false,
   },
   "document": PageBreak {
-    "adder": Object {
-      "data": Array [
-        Object {
+    "adder": {
+      "data": [
+        {
           "page_break": true,
         },
       ],
     },
-    "children": Array [],
+    "children": [],
     "parent": null,
-    "props": Object {},
+    "props": {},
     "root": [Circular],
   },
 }

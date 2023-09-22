@@ -26,7 +26,7 @@ function getHostContextNode(rootNode) {
     return ROOT_NODE_INSTANCE = rootNode;
   }
 
-  console.warn(`${rootNode} is not an instance of officegen docx constructor.`);
+  console.warn(`${rootNode} is not an instance of officegen constructor.`);
   // Lazily create the instance (escape hatch if the global state is mutated)
   return ROOT_NODE_INSTANCE = new WordDocument();
 }

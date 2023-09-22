@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { List, BulletItem, Document } from '../src/';
+import { List, BulletItem, Document } from '../src';
 
 class ListComponent extends Component {
-  render () {
+  render() {
     return (
       <Document>
         <List>
@@ -15,4 +15,4 @@ class ListComponent extends Component {
   }
 }
 
-export default ListComponent
+export default ListComponent;

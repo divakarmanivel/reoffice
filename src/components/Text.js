@@ -6,7 +6,7 @@ import { alignChildren, renderText } from '../utils/nodes';
 
 /**
  * This component creates a new paragraph with every new instance and renders the children.
- * It wraps LineBreak and Image component as intermediate component and calls the corresponding 
+ * It wraps LineBreak and Image component as intermediate component and calls the corresponding
  * render method. This behaviour may change depending on new use cases (from open office xml)
  */
 class Text extends Root {
@@ -40,7 +40,7 @@ class Text extends Root {
         await instance.addLineBreak();
         break;
       case 'Image':
-        // Here we keep track of render() method for Image component as this avoids rendering - 
+        // Here we keep track of render() method for Image component as this avoids rendering -
         // the Image component twice because Document component also calls render() method on all -
         // of its children. So we set its parent to 'Text' component and it calls render() once -
         // and avoids a second render() call by setting its parent to 'Text'. By default, if we -

@@ -79,9 +79,9 @@ function headerValidators(props) {
 }
 
 /**
- * Validates schema for style prop in <Table /> component 
+ * Validates schema for style prop in <Table /> component
  * (currently styles cannot be extended so style schema is needed)
- * 
+ *
  * @param {Object} props Component props
  */
 function tableStyleValidators(props) {

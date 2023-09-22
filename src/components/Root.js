@@ -3,6 +3,7 @@
  */
 class Root {
   parent = null;
+
   children = [];
 
   constructor(root, props) {

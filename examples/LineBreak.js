@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { LineBreak, Document, Text } from '../src/';
+import { LineBreak, Document, Text } from '../src';
 
 class LineBreakComponent extends Component {
-  render () {
+  render() {
     return (
       <Document>
         <Text>
@@ -15,4 +15,4 @@ class LineBreakComponent extends Component {
   }
 }
 
-export default LineBreakComponent
+export default LineBreakComponent;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from '../src/';
+import { Table } from '../src';
 import { testRenderer as render } from '../src/renderer/render';
 
 const tableStyle = {
@@ -16,27 +16,27 @@ const HEADERS = [
     styles: {
       color: 'red',
       bold: true,
-      size: 10
-    }
+      size: 10,
+    },
   },
   {
     value: 'Capacity',
     styles: {
       color: 'blue',
       bold: true,
-      size: 10
-    }
-  }
-]
+      size: 10,
+    },
+  },
+];
 
-const DATA =         [
+const DATA = [
   ['iPhone 7', '128GB'],
-  ['iPhone 5SE', '64GB']
-]
+  ['iPhone 5SE', '64GB'],
+];
 
 it('should render a table with some data', () => {
-  expect(render(<Table headers={[{value: 'Name', styles: { color: 'red'}}]} data={[['Nitin']]} />)).toMatchSnapshot();
-})
+  expect(render(<Table headers={[{ value: 'Name', styles: { color: 'red' } }]} data={[['Divakar']]} />)).toMatchSnapshot();
+});
 
 it('should render a table with data and style prop', () => {
   const App = () => (
@@ -44,10 +44,10 @@ it('should render a table with data and style prop', () => {
       headers={HEADERS}
       data={DATA}
     />
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render a table with table style prop', () => {
   const App = () => (
@@ -56,7 +56,7 @@ it('should render a table with table style prop', () => {
       data={DATA}
       style={tableStyle}
     />
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});

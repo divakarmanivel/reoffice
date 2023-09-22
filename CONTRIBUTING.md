@@ -5,14 +5,14 @@ I'm excited to have you helping out. Thank you so much for your time 😄
 ### Contributing
 
 #### Understanding the codebase
-`redocx` uses [officegen](https://github.com/Ziv-Barber/officegen) to generate the documents. So before you start working on adding a new feature or fixing a bug, take a look at the officegen [documentation](https://github.com/Ziv-Barber/officegen/blob/master/manual/README-docx.md) and [examples](https://github.com/Ziv-Barber/officegen/blob/master/examples/make_docx.js). This will make things easier for you. Also if you need any more help on using officegen and regarding it's documentation, ask me. I am at [NTulswani](https://twitter.com/NTulswani) on Twitter
+`reoffice` uses [officegen](https://github.com/Ziv-Barber/officegen) to generate the documents. So before you start working on adding a new feature or fixing a bug, take a look at the officegen [documentation](https://github.com/Ziv-Barber/officegen/blob/master/manual/README-docx.md) and [examples](https://github.com/Ziv-Barber/officegen/blob/master/examples/make_docx.js). This will make things easier for you. Also if you need any more help on using officegen and regarding it's documentation, ask me.
 
 #### Setting up the environment
 
 Considering you've forked and cloned the repo on your system, switch to the directory and install the dependencies.
 
 ```
-cd redocx
+cd reoffice
 npm install
 ```
 

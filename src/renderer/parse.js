@@ -5,9 +5,8 @@
  */
 const parse = (input) => {
   async function parseComponent(inputComponent) {
-    // This property is accessed due to https://github.com/nitin42/redocx/blob/master/src/renderer/renderer.js#L32  
-    const document = inputComponent.document;
-
+    // This property is accessed due to https://github.com/divakarmanivel/reoffice/blob/master/src/renderer/renderer.js#L32
+    const { document } = inputComponent;
     await document.render();
     // Return the input component again because we rendered the children
     // which weren't wrapped inside a parent.

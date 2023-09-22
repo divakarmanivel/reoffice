@@ -1,11 +1,13 @@
 import React from 'react';
-import { Document, Text, LineBreak, Image, Hr } from '../src/';
+import {
+  Document, Text, LineBreak, Image, Hr,
+} from '../src';
 import { testRenderer as render } from '../src/renderer/render';
 
 it('sanity check', () => {
   const App = () => (
     <Text>Hello World!</Text>
-  )
+  );
   expect(render(<App />)).toMatchSnapshot();
 });
 
@@ -14,30 +16,30 @@ it('should render the children', () => {
     <Text>
       Hello ! This is a test for rendering the children!
     </Text>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should accept style prop', () => {
   const App = () => (
     <Text style={{ color: 'red' }}>
-      I'm red!
+      I am red!
     </Text>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should accept align prop', () => {
   const App = () => (
     <Text align='center'>
-      I'm centered!
+      I am centered!
     </Text>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should render the children with a LineBreak component', () => {
   const App = () => (
@@ -46,10 +48,10 @@ it('should render the children with a LineBreak component', () => {
       <LineBreak />
       This is a new line!
     </Text>
-  )
+  );
 
-  expect(render(<App />)).toMatchSnapshot()
-})
+  expect(render(<App />)).toMatchSnapshot();
+});
 
 it('should render the children with a Image component', () => {
   const App = () => (
@@ -57,10 +59,10 @@ it('should render the children with a Image component', () => {
       Hello World!
       <Image src='../src/concr.png' />
     </Text>
-  )
+  );
 
-  expect(render(<App />)).toMatchSnapshot()
-})
+  expect(render(<App />)).toMatchSnapshot();
+});
 
 it('should render the children with a Hr component', () => {
   const App = () => (
@@ -68,10 +70,10 @@ it('should render the children with a Hr component', () => {
       Hello World!
       <Hr />
     </Text>
-  )
+  );
 
-  expect(render(<App />)).toMatchSnapshot()
-})
+  expect(render(<App />)).toMatchSnapshot();
+});
 
 it('should render with intermediate components', () => {
   const App = () => (
@@ -83,17 +85,17 @@ it('should render with intermediate components', () => {
       <Hr/>
       <Image src='../src/concr.png' />
     </Text>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});
 
 it('should align the children with context', () => {
   const App = () => (
     <Document align='center'>
-      <Text>Hello ! I'm centered</Text>
+      <Text>Hello! I am centered</Text>
     </Document>
-  )
+  );
 
   expect(render(<App />)).toMatchSnapshot();
-})
+});

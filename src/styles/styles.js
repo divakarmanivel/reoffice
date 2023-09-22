@@ -8,7 +8,8 @@ import isHex from 'validator/lib/isHexadecimal';
 function getHexOrColor(value) {
   if (typeof value === 'undefined') {
     return isHex('undefined');
-  } else if (isHex(value)) {
+  }
+  if (isHex(value)) {
     return value.replace('#', '');
   }
   return chroma(value).hex().replace('#', '');
@@ -68,7 +69,7 @@ function imageProps(props) {
 }
 
 /**
- * Function to apply style attributes to <Image /> component without style prop 
+ * Function to apply style attributes to <Image /> component without style prop
  * @param {Object} Component props
  */
 function addStyles(props) {
@@ -91,7 +92,9 @@ function applyImageProps(props) {
  * @param {Object} values style attributes for table
  */
 function styleSerializer(values) {
-  const { bold, size, color, align, vAlign, fontFamily, fill, cellColWidth } = values;
+  const {
+    bold, size, color, align, vAlign, fontFamily, fill, cellColWidth,
+  } = values;
 
   return {
     b: bold,

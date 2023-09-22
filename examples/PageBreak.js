@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { PageBreak, Document, Text, Image } from '../src/';
+import {
+  PageBreak, Document, Text,
+} from '../src';
 
 class PageBreakComponent extends Component {
-  render () {
+  render() {
     return (
       <Document>
         <Text>Hello World!</Text>
@@ -13,4 +15,4 @@ class PageBreakComponent extends Component {
   }
 }
 
-export default PageBreakComponent
+export default PageBreakComponent;

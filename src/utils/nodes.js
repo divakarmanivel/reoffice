@@ -12,7 +12,7 @@ async function renderText(child, props, styles, instance) {
 }
 
 /**
- * 
+ *
  * @param {Object} instance Document instance
  * @param {string} alignWithContext Align (Document component)
  * @param {string} alignThroughProp Align prop

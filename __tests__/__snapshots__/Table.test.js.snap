@@ -3,7 +3,7 @@
 exports[`should render a table with data and style prop 1`] = `
 WordDocument {
   "doc": officegen {
-    "_events": Object {
+    "_events": {
       "afterGen": [Function],
       "beforeGen": [Function],
       "clearData": [Function],
@@ -19,46 +19,47 @@ WordDocument {
     "createJson": [Function],
     "createListOfDots": [Function],
     "createListOfNumbers": [Function],
+    "createNestedOrderedList": [Function],
+    "createNestedUnOrderedList": [Function],
     "createP": [Function],
     "createTable": [Function],
-    "data": Array [],
-    "domain": null,
+    "data": [],
     "generate": [Function],
     "getFooter": [Function],
     "getHeader": [Function],
-    "info": Object {
-      "cp:category": Object {
+    "info": {
+      "cp:category": {
         "data": "",
         "def_data": "",
         "element": "cp:category",
       },
-      "cp:contentStatus": Object {
+      "cp:contentStatus": {
         "data": "",
         "def_data": "",
         "element": "cp:contentStatus",
       },
-      "cp:keywords": Object {
+      "cp:keywords": {
         "data": "",
         "def_data": "",
         "element": "cp:keywords",
       },
-      "dc:description": Object {
+      "dc:description": {
         "data": "",
         "def_data": "",
         "element": "dc:description",
       },
-      "dc:subject": Object {
+      "dc:subject": {
         "data": "",
         "def_data": "",
         "element": "dc:subject",
       },
-      "dc:title": Object {
+      "dc:title": {
         "data": "",
         "def_data": "",
         "element": "dc:title",
       },
     },
-    "options": Object {
+    "options": {
       "type": "docx",
     },
     "putPageBreak": [Function],
@@ -71,38 +72,39 @@ WordDocument {
     "setTheme": [Function],
     "startNewDoc": [Function],
     "theme": null,
+    Symbol(kCapture): false,
   },
   "document": Table {
-    "TABLE_DATA": Array [],
-    "defaultStyles": Object {
+    "TABLE_DATA": [],
+    "defaultStyles": {
       "borders": true,
       "tableAlign": "left",
       "tableColWidth": 2500,
       "tableColor": "black",
       "tableSize": 24,
     },
-    "props": Object {
-      "data": Array [
-        Array [
+    "props": {
+      "data": [
+        [
           "iPhone 7",
           "128GB",
         ],
-        Array [
+        [
           "iPhone 5SE",
           "64GB",
         ],
       ],
-      "headers": Array [
-        Object {
-          "styles": Object {
+      "headers": [
+        {
+          "styles": {
             "bold": true,
             "color": "red",
             "size": 10,
           },
           "value": "Phone",
         },
-        Object {
-          "styles": Object {
+        {
+          "styles": {
             "bold": true,
             "color": "blue",
             "size": 10,
@@ -119,7 +121,7 @@ WordDocument {
 exports[`should render a table with some data 1`] = `
 WordDocument {
   "doc": officegen {
-    "_events": Object {
+    "_events": {
       "afterGen": [Function],
       "beforeGen": [Function],
       "clearData": [Function],
@@ -135,46 +137,47 @@ WordDocument {
     "createJson": [Function],
     "createListOfDots": [Function],
     "createListOfNumbers": [Function],
+    "createNestedOrderedList": [Function],
+    "createNestedUnOrderedList": [Function],
     "createP": [Function],
     "createTable": [Function],
-    "data": Array [],
-    "domain": null,
+    "data": [],
     "generate": [Function],
     "getFooter": [Function],
     "getHeader": [Function],
-    "info": Object {
-      "cp:category": Object {
+    "info": {
+      "cp:category": {
         "data": "",
         "def_data": "",
         "element": "cp:category",
       },
-      "cp:contentStatus": Object {
+      "cp:contentStatus": {
         "data": "",
         "def_data": "",
         "element": "cp:contentStatus",
       },
-      "cp:keywords": Object {
+      "cp:keywords": {
         "data": "",
         "def_data": "",
         "element": "cp:keywords",
       },
-      "dc:description": Object {
+      "dc:description": {
         "data": "",
         "def_data": "",
         "element": "dc:description",
       },
-      "dc:subject": Object {
+      "dc:subject": {
         "data": "",
         "def_data": "",
         "element": "dc:subject",
       },
-      "dc:title": Object {
+      "dc:title": {
         "data": "",
         "def_data": "",
         "element": "dc:title",
       },
     },
-    "options": Object {
+    "options": {
       "type": "docx",
     },
     "putPageBreak": [Function],
@@ -187,25 +190,26 @@ WordDocument {
     "setTheme": [Function],
     "startNewDoc": [Function],
     "theme": null,
+    Symbol(kCapture): false,
   },
   "document": Table {
-    "TABLE_DATA": Array [],
-    "defaultStyles": Object {
+    "TABLE_DATA": [],
+    "defaultStyles": {
       "borders": true,
       "tableAlign": "left",
       "tableColWidth": 2500,
       "tableColor": "black",
       "tableSize": 24,
     },
-    "props": Object {
-      "data": Array [
-        Array [
-          "Nitin",
+    "props": {
+      "data": [
+        [
+          "Divakar",
         ],
       ],
-      "headers": Array [
-        Object {
-          "styles": Object {
+      "headers": [
+        {
+          "styles": {
             "color": "red",
           },
           "value": "Name",
@@ -220,7 +224,7 @@ WordDocument {
 exports[`should render a table with table style prop 1`] = `
 WordDocument {
   "doc": officegen {
-    "_events": Object {
+    "_events": {
       "afterGen": [Function],
       "beforeGen": [Function],
       "clearData": [Function],
@@ -236,46 +240,47 @@ WordDocument {
     "createJson": [Function],
     "createListOfDots": [Function],
     "createListOfNumbers": [Function],
+    "createNestedOrderedList": [Function],
+    "createNestedUnOrderedList": [Function],
     "createP": [Function],
     "createTable": [Function],
-    "data": Array [],
-    "domain": null,
+    "data": [],
     "generate": [Function],
     "getFooter": [Function],
     "getHeader": [Function],
-    "info": Object {
-      "cp:category": Object {
+    "info": {
+      "cp:category": {
         "data": "",
         "def_data": "",
         "element": "cp:category",
       },
-      "cp:contentStatus": Object {
+      "cp:contentStatus": {
         "data": "",
         "def_data": "",
         "element": "cp:contentStatus",
       },
-      "cp:keywords": Object {
+      "cp:keywords": {
         "data": "",
         "def_data": "",
         "element": "cp:keywords",
       },
-      "dc:description": Object {
+      "dc:description": {
         "data": "",
         "def_data": "",
         "element": "dc:description",
       },
-      "dc:subject": Object {
+      "dc:subject": {
         "data": "",
         "def_data": "",
         "element": "dc:subject",
       },
-      "dc:title": Object {
+      "dc:title": {
         "data": "",
         "def_data": "",
         "element": "dc:title",
       },
     },
-    "options": Object {
+    "options": {
       "type": "docx",
     },
     "putPageBreak": [Function],
@@ -288,38 +293,39 @@ WordDocument {
     "setTheme": [Function],
     "startNewDoc": [Function],
     "theme": null,
+    Symbol(kCapture): false,
   },
   "document": Table {
-    "TABLE_DATA": Array [],
-    "defaultStyles": Object {
+    "TABLE_DATA": [],
+    "defaultStyles": {
       "borders": true,
       "tableAlign": "left",
       "tableColWidth": 2500,
       "tableColor": "black",
       "tableSize": 24,
     },
-    "props": Object {
-      "data": Array [
-        Array [
+    "props": {
+      "data": [
+        [
           "iPhone 7",
           "128GB",
         ],
-        Array [
+        [
           "iPhone 5SE",
           "64GB",
         ],
       ],
-      "headers": Array [
-        Object {
-          "styles": Object {
+      "headers": [
+        {
+          "styles": {
             "bold": true,
             "color": "red",
             "size": 10,
           },
           "value": "Phone",
         },
-        Object {
-          "styles": Object {
+        {
+          "styles": {
             "bold": true,
             "color": "blue",
             "size": 10,
@@ -327,7 +333,7 @@ WordDocument {
           "value": "Capacity",
         },
       ],
-      "style": Object {
+      "style": {
         "borders": true,
         "tableAlign": "center",
         "tableColWidth": 4261,

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Text, Document } from '../src/';
+import { Text, Document } from '../src';
 
 const TextStyles = {
   color: 'red',
-  fontSize: 30
+  fontSize: 30,
 };
 
 class TextComponent extends Component {

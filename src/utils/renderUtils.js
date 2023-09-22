@@ -1,19 +1,9 @@
 import path from 'path';
-import os from 'os';
-import execa from 'execa';
-import minimatch from 'minimatch';
-
-/* eslint-disable no-unused-expressions */
-/**
- * Open the doc app
- */
-function openDocApp(file) {
-  os.platform() === 'darwin' ? execa.shell(`open -a pages ${path.resolve(file)}`) : null;
-}
+import { minimatch } from 'minimatch';
 
 /**
  * Document element
- * @param {Object} element 
+ * @param {Object} element
  */
 function validateElement(element) {
   if (!element) {
@@ -29,7 +19,7 @@ function validateElement(element) {
 
 /**
  * Filepath for the document
- * @param {string} filePath 
+ * @param {string} filePath
  */
 function validatePath(filePath) {
   if (filePath === null || filePath === undefined) {
@@ -58,4 +48,8 @@ function Events(filePath, resolve, reject) {
   };
 }
 
-export { Events, openDocApp, validateElement, validatePath };
+export {
+  Events,
+  validateElement,
+  validatePath,
+};

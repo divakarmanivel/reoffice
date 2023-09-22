@@ -1,5 +1,4 @@
 import { render } from './renderer/render';
-import Platform from './utils/platform';
 
 /**
  * Component name (input to createElement function call after transpilation with Babel)
@@ -33,6 +32,5 @@ export {
   Table,
   Header,
   Footer,
-  Platform,
   render,
 };

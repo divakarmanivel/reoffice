@@ -4,7 +4,7 @@ import { applyStyles } from '../styles/styles';
 /**
  * This component wraps all the children (string, components) and renders them.
  * It only takes two props, 'align' for alignment of the document and 'info' for adding
- * document information like name of the author and description of the document. 
+ * document information like name of the author and description of the document.
  */
 
 class Document {
@@ -37,9 +37,8 @@ class Document {
     for (let i = 0; i < this.children.length; i += 1) {
       if (typeof this.children[i] === 'string') {
         // If not a component, render it as a paragraph
-        await this.adder.addText(
-          this.children[i], this.props.style ? applyStyles(this.props.style) : {},
-        );
+        const styles = this.props.style ? applyStyles(this.props.style) : {};
+        await this.adder.addText(this.children[i], styles);
       } else if (typeof this.children[i] === 'object') {
         // Call render() for each component
         await this.children[i].render(this.props.align, this.props.style ? this.props.style : {});

@@ -3,8 +3,11 @@ import streams from 'memory-streams';
 import { createElement } from '../utils/createElement';
 import { WordRenderer } from './renderer';
 import parse from './parse';
-import { validateElement, validatePath, Events, openDocApp } from '../utils/renderUtils';
-
+import {
+  validateElement,
+  validatePath,
+  Events,
+} from '../utils/renderUtils';
 
 async function renderToFile(element, filePath) {
   const container = createElement('ROOT');
@@ -13,7 +16,7 @@ async function renderToFile(element, filePath) {
 
   validatePath(filePath);
 
-  const node = WordRenderer.createContainer(container);
+  const node = WordRenderer.createContainer(container, 0); // 0 for LegacyRoot which makes it synchronous
 
   WordRenderer.updateContainer(element, node, null);
 
@@ -22,8 +25,6 @@ async function renderToFile(element, filePath) {
 
   await new Promise((resolve, reject) => {
     output.doc.generate(stream, Events(filePath, resolve, reject));
-
-    openDocApp(filePath);
   });
 }
 
@@ -32,7 +33,7 @@ async function renderToMemory(element) {
 
   validateElement(element);
 
-  const node = WordRenderer.createContainer(container);
+  const node = WordRenderer.createContainer(container, 0); // 0 for LegacyRoot which makes it synchronous
 
   WordRenderer.updateContainer(element, node, null);
 
@@ -59,9 +60,9 @@ async function renderToMemory(element) {
  */
 async function render(element, filePath) {
   if (typeof filePath !== 'undefined') {
-    return renderToFile(element, filePath);
+    return await renderToFile(element, filePath);
   }
-  return renderToMemory(element);
+  return await renderToMemory(element);
 }
 
 /**
@@ -69,10 +70,9 @@ async function render(element, filePath) {
  */
 function testRenderer(element) {
   const container = createElement('ROOT');
-  const node = WordRenderer.createContainer(container);
+  const node = WordRenderer.createContainer(container, 0); // 0 for LegacyRoot which makes it synchronous
 
   WordRenderer.updateContainer(element, node, null);
-
   return container;
 }
 

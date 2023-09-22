@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Hr, Document, Text } from '../src/';
+import { Hr, Document, Text } from '../src';
 
 class HrComponent extends Component {
-  render () {
+  render() {
     return (
       <Document>
         <Text>Below is a horizontal ruler</Text>
@@ -12,4 +12,4 @@ class HrComponent extends Component {
   }
 }
 
-export default HrComponent
+export default HrComponent;

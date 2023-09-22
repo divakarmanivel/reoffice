@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Image, Document } from '../src/';
+import { Image, Document } from '../src';
 
 class ImageComponent extends Component {
-  render () {
+  render() {
     return (
       <Document>
         <Image src='./examples/concr.png' width='300' height='300' align='center' />
@@ -11,4 +11,4 @@ class ImageComponent extends Component {
   }
 }
 
-export default ImageComponent
+export default ImageComponent;
